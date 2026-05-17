@@ -20,3 +20,22 @@ public class Pizza {
     public String[] getIngredientes() {
         return ingredientes;
     }
+
+     @Override
+    public String toString() {
+
+        String texto = "Pizza: " + nombre + "\n";
+        texto += "Ingredientes: ";
+
+        for (int i = 0; i < ingredientes.length; i++) {
+
+            texto += ingredientes[i];
+
+            if (i < ingredientes.length - 1) {
+                texto += ", ";
+            }
+        }
+
+        return texto;
+    }
+}
