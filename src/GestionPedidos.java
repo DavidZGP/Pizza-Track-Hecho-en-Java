@@ -7,7 +7,7 @@ public class GestionPedidos {
 
     public GestionPedidos() {
 
-        pilaPrincipal = new PilaPizza();
+        pilaPrincipal = new PilaPizza();  
         pilaSecundaria = new PilaPizza();
     }
     public void registrarPizza(Pizza pizza) {
@@ -21,13 +21,13 @@ public class GestionPedidos {
 
     public void deshacer() {
 
-        if (pilaPrincipal.isEmpty()) {
-
+        if (pilaPrincipal.isEmpty()) {  
+            //Verifica si hay pedidos para deshacer
             System.out.println("No hay pedidos para deshacer.");
             return;
         }
 
-        Pizza pizza = pilaPrincipal.pop();
+        Pizza pizza = pilaPrincipal.pop();  //Elimina el pedido actual de la pila principal
 
         pilaSecundaria.push(pizza);
 
@@ -43,9 +43,9 @@ public class GestionPedidos {
             return;
         }
 
-        Pizza pizza = pilaSecundaria.pop();
+        Pizza pizza = pilaSecundaria.pop(); // Elimina el pedido de la pila secundaria para rehacerlo
 
-        pilaPrincipal.push(pizza);
+        pilaPrincipal.push(pizza);  // Vuelve a agregar el pedido a la pila principal
 
         System.out.println("Pedido rehecho:");
         System.out.println(pizza);
@@ -60,12 +60,12 @@ public class GestionPedidos {
         }
 
         System.out.println("Pedido actual:");
-        System.out.println(pilaPrincipal.peek());
+        System.out.println(pilaPrincipal.peek());  // Muestra el pedido actual sin eliminarlo de la pila
     }
 
-     public static void main(String[] args) {
+     public static void main(String[] args) {  
 
-        Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);     // Crea un objeto Scanner para leer la entrada del usuario
 
         GestionPedidos sistema = new GestionPedidos();
 
@@ -92,9 +92,9 @@ public class GestionPedidos {
 
                     String[] ingredientes = new String[3];
 
-                    for (int i = 0; i < 3; i++) {
+                    for (int i = 0; i < 3; i++) {  // Solicita al usuario que ingrese los ingredientes de la pizza
 
-                        System.out.print("Ingrediente " + (i + 1) + ": ");
+                        System.out.print("Ingrediente " + (i + 1) + ": ");  // Lee cada ingrediente y lo almacena en el arreglo de ingredientes
                         ingredientes[i] = sc.nextLine();
                     }
 
@@ -138,7 +138,7 @@ public class GestionPedidos {
         sc.close();
     }
 
-    public static int leerEntero(Scanner sc) {
+    public static int leerEntero(Scanner sc) {  // Método auxiliar para leer un número entero y manejar entradas no válidas
 
         while (!sc.hasNextInt()) {
 
