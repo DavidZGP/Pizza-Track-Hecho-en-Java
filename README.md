@@ -73,3 +73,7 @@ GestionPedidos.java
    - Deshacer pedidos
    - Rehacer pedidos
    - Mostrar pedido actual
+
+   ---
+   # Link Video Explicativo
+   https://drive.google.com/file/d/1lGMKyfbkdt247fI7D99zrehWUPLPDrjv/view?usp=sharing
